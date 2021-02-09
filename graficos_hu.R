@@ -4,6 +4,8 @@
 
 bd <- read.csv("C:/R/novo_hu"); head(bd)
 names(bd)
+dim(bd) #ver dimensao do bd
+par(bd)
 
 library(tidyverse)
 
@@ -12,15 +14,25 @@ library(tidyverse)
 ##supondo: y = acips, x = shaps
 
 ##correlacao
-cor(bd$shaps, bd$acips_total, use = "all.obs") #esta dando NA o resultado...
+cor(bd$shaps, bd$acips_total, use = "all.obs")
+#esta dando NA o resultado...
+teste <- na.omit(cbind(bd$shaps, bd$acips_total)) 
+cor(teste)
+dim(teste)
 ?cor
 regressao <- lm(bd$acips_total ~ bd$shaps); regressao
 summary(regressao)
 ##como ignorar os NA??
-#na.action = na.omit, na.rm = TRUE  ja tentei esses..
+#na.action = na.omit, na.rm = TRUE,  use = "all.obs"  ja tentei esses..
+
 
 
 ##quais variaveis escolher???
+###regressao multipla selecao de variaveis
+##hemograma x questionarios
+##fazer grupos: socioeconomico, binarias, questionarios
+
+bd
 
 
 ##graf1  ---- 2 variaveis
@@ -72,7 +84,7 @@ pairs(~ shaps + acips_total + idade, bd, na.action = na.omit, upper.panel = NULL
 panel.cor <- function(x, y, digits = 2, prefix = "", ...) { #cex.cor
   usr <- par("usr"); on.exit(par(usr))
   par(usr = c(0, 1, 0, 1))
-  r <- abs(cor(x, y))
+  r <- cor(x, y)
   txt <- format(c(r, 0.123456789), digits = digits)[1]
   txt <- paste0(prefix, txt)
   #if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
@@ -81,6 +93,6 @@ panel.cor <- function(x, y, digits = 2, prefix = "", ...) { #cex.cor
 #correlacao vai aparecer todas positivas
 
 ##os comentados fazer o tamanho da letra ser proporcional ao numero
-pairs(~ shaps + acips_total + idade, bd, na.action = na.omit, upper.panel = panel.cor,
+pairs(~ shaps + acips_total + idade + teps_total, bd, na.action = na.omit, upper.panel = panel.cor,
       pch = 19, lwd = 2, col = as.factor(bd$sexo), lower.panel = panel.smooth)
 ?text

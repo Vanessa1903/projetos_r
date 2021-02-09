@@ -567,7 +567,7 @@ quesi_neglig_fis <- dados$QUESI_negligencia_fisica #td diferente
 ###questoes 1, 2, 4, 6, 26
 dados$QUESI_1
 
-quesi_neglig_emoc <- dados$QUESI_neglig?ncia_emocional #td diferente
+quesi_neglig_emoc <- dados$QUESI_negligencia_emocional #td diferente
 ###questoes 3, 8, 14, 18, 25
 
 
