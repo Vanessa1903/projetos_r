@@ -2,12 +2,39 @@
 
 ##############GRÁFICOS DE DISPERSÃO
 
-bd <- read.csv("C:/R/novo_hu"); head(bd)
-names(bd)
-dim(bd) #ver dimensao do bd
-par(bd)
+grupo_socioeco <- c(bd[,1:7], bd[,29:63]); 
+head(grupo_socioeco)
+names(grupo_socioeco)
+grupo_socioeco
+write.csv(grupo_socioeco, file = "socioeco")
+
+exames[51,] <- NA
+tail(exames)
+grupo_exames <- c(bd[,8:28], exames);
+head(grupo_exames)
+names(grupo_exames)
+write.csv(grupo_exames, file = "exames")
+
+grupo_questio <- bd[,64:84]
+grupo_questio
+head(grupo_questio)
+names(grupo_questio)
+write.csv(grupo_questio, file = "questio")
+
 
 library(tidyverse)
+
+bd <- read.csv("~/projetos_r/novo_hu"); head(bd)
+exames_novos <- read.csv("~/projetos_r/exames_novos_hu"); head(exames)
+##grupos
+socioeco <- read.csv("~/projetos_r/socioeco"); head(socioeco)
+exames <- read.csv("~/projetos_r/exames"); head(exames)
+questio <- read.csv("~/projetos_r/questio"); head(questio)
+
+
+
+dim(bd) #ver dimensao do bd
+par(bd)
 
 ###########TESTE 1: SHAPS X ACIPS
 
