@@ -572,8 +572,8 @@ names(bd)
 
 ##ADICIONANDO COLUNAS NOVAS
 
-bd <- mutate(bd, bis_total, bas_total, quesi_abuso_emoc, quesi_abuso_fis, quesi_abuso_sex,
-             quesi_neglig_emoc, quesi_neglig_fis, quesi_total); 
+#bd <- mutate(bd, bis_total, bas_total, quesi_abuso_emoc, quesi_abuso_fis, quesi_abuso_sex,
+ #            quesi_neglig_emoc, quesi_neglig_fis, quesi_total); 
 head(bd)
 tail(bd)
 names(bd)
