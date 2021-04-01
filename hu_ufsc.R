@@ -520,9 +520,6 @@ panas11 <- ifelse(panas11 == "nada ou muito pouco", 1,
                                 ifelse(panas11 == "muito", 4,
                                        ifelse(panas11 == "totalmente", 5, NA))))); panas11
 
-###o total ? simplesmente a soma dos dois afetos?
-###o escore de cada questao ? mesmo de 1 a 5 como definido pelo questionario?
-
 
 
 ##HADS#############################OKK
@@ -549,39 +546,18 @@ quesi_abuso_fis
 quesi_abuso_sex <- dados$QUESI_abuso_sexual #ok
 quesi_abuso_sex
 
-dados$QUESI_negligencia_fisica #td diferente
+dados$QUESI_negligencia_fisica 
 ###questoes 1, 2, 4, 6, 26
 quesi_neglig_fis <- c(13,9,5,11,6,7,15,12,6,6,5,12,7,8,12,17,8,11,6,8,NA,6,5,8,11,9,5,5,5,14,
                       6,9,9,10,13,NA,6,8,NA,7,6,5,7,13,NA,5,15,16,7,5,9)
 
-dados$QUESI_negligencia_emocional #td diferente
+dados$QUESI_negligencia_emocional
 ###questoes 3, 8, 14, 18, 25
 quesi_neglig_emoc <- as.numeric(c(16,5,5,5,8,11,17,16,9,8,16,17,7,15,9,17,12,14,17,9,NA,8,5,11,15,5,12,
                                   5,7,17,9,11,11,10,19,NA,7,18,NA,8,5,9,6,11,NA,8,17,14,5,10,13))  
 
 
-##########################BANCO DE DADOS NOVO######################
-library(tidyverse)
-###CHAMANDO
-write.csv(bd, file = "novo_hu")
 
-bd <- read.csv("C:/R/novo_hu"); head(bd)
-tail(bd)
-bd$X.1 <- NULL
-names(bd)
-
-##ADICIONANDO COLUNAS NOVAS
-
-#bd <- mutate(bd, bis_total, bas_total, quesi_abuso_emoc, quesi_abuso_fis, quesi_abuso_sex,
- #            quesi_neglig_emoc, quesi_neglig_fis, quesi_total); 
-head(bd)
-tail(bd)
-names(bd)
-bd$X.2 <- NULL
-bd$X <- NULL
-bd$hads <- NULL
-
-###########################
 ###########ADICIONANDO NOVOS DADOS DE EXAMES
 
 setwd("C:/R")
