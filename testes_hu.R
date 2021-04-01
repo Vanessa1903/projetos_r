@@ -9,6 +9,8 @@
 ##H1: h? correlacao
 
 bd <- read.csv("~/projetos_r/novo_huu"); head(bd)
+names(bd)
+bd$X <- NULL; bd$X.1 <- NULL
 
 ###!!!correlacao teste e do pairs ta dando diferente
 
@@ -700,6 +702,65 @@ cor.test(bd$plaquetas_vol, bd$renda_familia) #p = 0,4762
 cor.test(bd$plaquetas_vol, bd$peso) #p = 0,9738
 cor.test(bd$plaquetas_vol, bd$altura) #p = 0,3823
 
+
 #teste normal
 shapiro.test(bd$acips_total)
 shapiro.test(bd$shaps)
+
+
+
+##############MULTICOLINEARIDADE##########3
+
+#####TODAS AS QUANTI
+# method of factorization: `hj' to HJ (simetric, Galindo (1986));
+y_hj<- bpca(w, method='hj'); names(y_hj); round(y_hj$eigenvalues,4)
+?bpca
+summary(y_hj)
+
+####QUESTIONARIOS
+v_hj<- bpca(v, method='hj'); names(v_hj); round(v_hj$eigenvalues,4)
+summary(v_hj)
+
+####EXAMES
+x_hj<- bpca(x, method='hj'); names(x_hj); round(x_hj$eigenvalues,4)
+summary(x_hj)
+
+
+####VIF####
+require(faraway)
+vif(modelo2)
+?vif
+vif(m2)
+vif(m5)
+
+
+
+####NUMERO DE CONDICAO (AUTOVALORES)####
+
+library(metan)
+#QUANTI
+
+#matriz
+n <- nrow(Mcor)
+cold1 <- colindiag(Mcor, n = n)
+print(cold1)
+
+?colindiag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

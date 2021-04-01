@@ -3,15 +3,22 @@
 ###---------------------------------------------###
 
 quant <- read.csv("~/projetos_r/quant"); head(quant)
+names(quant)
+quant$X <- NULL
+
 questio <- read.csv("~/projetos_r/questio"); head(questio)
+names(questio)
+questio$X <- NULL
+
 exames <- read.csv("~/projetos_r/exames"); head(exames)
+names(exames)
+exames$X <- NULL
+
 
 ###--- Todas as variaveis quanti
 w <- na.omit(quant); head(w)
 dim(w)
 round(sqrt(diag(cov(w))),4) # variancia
-#sqrt((diag(cov(w), na.action = na.omit)
-##ver como ignorar o NA
 round(cor(w),2)             # matriz de correlacao
 
 ###--- QUESTIONARIOS
@@ -179,7 +186,7 @@ acp_v<- prcomp(v)
 summary(acp_v)                   # Contribuicao de cada componente principal
 round(summary(acp_v)$rotation,2) # Contribuicao de cada variavel na CP
 
-#----- ACP  QUESTIONARIOS
+#----- ACP  EXAMES
 acp_x<- prcomp(x)
 summary(acp_x)                   # Contribuicao de cada componente principal
 round(summary(acp_x)$rotation,2) # Contribuicao de cada variavel na CP
@@ -195,7 +202,6 @@ y_hj<- bpca(w, method='hj'); names(y_hj); round(y_hj$eigenvalues,4)
 ?bpca
 summary(y_hj)
 plot(y_hj, obj.names=F, xlim = c(-4,4), ylim = c(-4,4))
-
 
 ####QUESTIONARIOS
 v_hj<- bpca(v, method='hj'); names(v_hj); round(v_hj$eigenvalues,4)
