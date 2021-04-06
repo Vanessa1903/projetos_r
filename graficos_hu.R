@@ -5,22 +5,31 @@
 library(tidyverse)
 
 bd <- read.csv("~/projetos_r/novo_huu"); head(bd)
-write.csv(bd, file = "~/projetos_r/novo_huu")
+bd$X <- NULL
+#write.csv(bd, file = "~/projetos_r/novo_huu")
+names(bd)
 
 #####grupos#####
+library(tidyverse)
 socioeco <- read.csv("~/projetos_r/socioeco"); head(socioeco)
-socioeco$X.1 <- NULL
 socioeco$X <- NULL
 names(socioeco)
 
 questio <- read.csv("~/projetos_r/questio"); head(questio)
-#names(questio)
+questio$X <- NULL
+names(questio)
 
 exames <- read.csv("~/projetos_r/exames"); head(exames)
+exames$X <- NULL
 
 quant <- read.csv("~/projetos_r/quant"); head(quant)
+names(quant)
+quant$X <- NULL
 
 quali <- read.csv("~/projetos_r/quali"); head(quali)
+names(quali)
+quali$X <- NULL
+
 
 dim(bd) #ver dimensao do bd
 par(bd)

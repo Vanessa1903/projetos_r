@@ -34,6 +34,20 @@ cor.test(bd$shaps, bd$renda_familia) #p = 0,5127
 cor.test(bd$shaps, bd$peso) #p = 0,3912
 cor.test(bd$shaps, bd$altura) #p = 0,1556
 
+cor.test(bd$shaps, bd$hads_ans)
+cor.test(bd$shaps, bd$hads_dep)
+cor.test(bd$shaps, bd$bas_total)
+cor.test(bd$shaps, bd$bis_total)
+cor.test(bd$shaps, bd$panas_pos)
+cor.test(bd$shaps, bd$panas_neg)
+cor.test(bd$shaps, bd$quesi_total)
+cor.test(bd$shaps, bd$quesi_abuso_emoc)
+cor.test(bd$shaps, bd$quesi_neglig_emoc)
+cor.test(bd$shaps, bd$quesi_abuso_sex)
+cor.test(bd$shaps, bd$quesi_abuso_fis)
+cor.test(bd$shaps, bd$quesi_neglig_fis)
+
+
 ##acips
 cor.test(bd$acips_total, bd$teps_total) #p = 1,276e
 cor.test(bd$acips_total, bd$hads_total) #p = 0,0002
@@ -48,6 +62,20 @@ cor.test(bd$acips_total, bd$renda_familia) #p = 0,6136
 cor.test(bd$acips_total, bd$peso) #p = 0,5779
 cor.test(bd$acips_total, bd$altura) #p = 0,9364
 
+cor.test(bd$acips_total, bd$hads_ans)
+cor.test(bd$acips_total, bd$hads_dep)
+cor.test(bd$acips_total, bd$bas_total)
+cor.test(bd$acips_total, bd$bis_total)
+cor.test(bd$acips_total, bd$panas_pos)
+cor.test(bd$acips_total, bd$panas_neg)
+cor.test(bd$acips_total, bd$quesi_total)
+cor.test(bd$acips_total, bd$quesi_abuso_emoc)
+cor.test(bd$acips_total, bd$quesi_neglig_emoc)
+cor.test(bd$acips_total, bd$quesi_abuso_sex)
+cor.test(bd$acips_total, bd$quesi_abuso_fis)
+cor.test(bd$acips_total, bd$quesi_neglig_fis)
+
+
 ##teps
 cor.test(bd$teps_total, bd$hads_total) #p = 0,0002
 cor.test(bd$teps_total, bd$neuroticismo) #p = 0,5228
@@ -61,6 +89,19 @@ cor.test(bd$teps_total, bd$renda_familia) #p = 0,5949
 cor.test(bd$teps_total, bd$peso) #p = 0,8894
 cor.test(bd$teps_total, bd$altura) #p = 0,9984
 
+cor.test(bd$teps_total, bd$hads_ans)
+cor.test(bd$teps_total, bd$hads_dep)
+cor.test(bd$teps_total, bd$bas_total)
+cor.test(bd$teps_total, bd$bis_total)
+cor.test(bd$teps_total, bd$panas_pos)
+cor.test(bd$teps_total, bd$panas_neg)
+cor.test(bd$teps_total, bd$quesi_total)
+cor.test(bd$teps_total, bd$quesi_abuso_emoc)
+cor.test(bd$teps_total, bd$quesi_neglig_emoc)
+cor.test(bd$teps_total, bd$quesi_abuso_sex)
+cor.test(bd$teps_total, bd$quesi_abuso_fis)
+cor.test(bd$teps_total, bd$quesi_neglig_fis)
+
 ##hads
 cor.test(bd$hads_total, bd$neuroticismo) #p = 2,661e
 cor.test(bd$hads_total, bd$PCR) #p = 0,828
@@ -73,6 +114,19 @@ cor.test(bd$hads_total, bd$renda_familia) #p = 0,4254
 cor.test(bd$hads_total, bd$peso) #p = 0,1073
 cor.test(bd$hads_total, bd$altura) #p = 0,4858
 
+cor.test(bd$hads_total, bd$hads_ans)
+cor.test(bd$hads_total, bd$hads_dep)
+cor.test(bd$hads_total, bd$bas_total)
+cor.test(bd$hads_total, bd$bis_total)
+cor.test(bd$hads_total, bd$panas_pos)
+cor.test(bd$hads_total, bd$panas_neg)
+cor.test(bd$hads_total, bd$quesi_total)
+cor.test(bd$hads_total, bd$quesi_abuso_emoc)
+cor.test(bd$hads_total, bd$quesi_neglig_emoc)
+cor.test(bd$hads_total, bd$quesi_abuso_sex)
+cor.test(bd$hads_total, bd$quesi_abuso_fis)
+cor.test(bd$hads_total, bd$quesi_neglig_fis)
+
 ##neuroticismo
 cor.test(bd$neuroticismo, bd$PCR) #p = 0,5197
 cor.test(bd$neuroticismo, bd$CRH) #p = 0,6605
@@ -83,6 +137,19 @@ cor.test(bd$neuroticismo, bd$num_filhos) #p = 0,3281
 cor.test(bd$neuroticismo, bd$renda_familia) #p = 0,22
 cor.test(bd$neuroticismo, bd$peso) #p = 0,2595
 cor.test(bd$neuroticismo, bd$altura) #p = 0,101
+
+cor.test(bd$neuroticismo, bd$hads_ans)
+cor.test(bd$neuroticismo, bd$hads_dep)
+cor.test(bd$neuroticismo, bd$bas_total)
+cor.test(bd$neuroticismo, bd$bis_total)
+cor.test(bd$neuroticismo, bd$panas_pos)
+cor.test(bd$neuroticismo, bd$panas_neg)
+cor.test(bd$neuroticismo, bd$quesi_total)
+cor.test(bd$neuroticismo, bd$quesi_abuso_emoc)
+cor.test(bd$neuroticismo, bd$quesi_neglig_emoc)
+cor.test(bd$neuroticismo, bd$quesi_abuso_sex)
+cor.test(bd$neuroticismo, bd$quesi_abuso_fis)
+cor.test(bd$neuroticismo, bd$quesi_neglig_fis)
 
 ##pcr
 cor.test(bd$PCR, bd$CRH) #p = 0,3318
@@ -702,6 +769,144 @@ cor.test(bd$plaquetas_vol, bd$renda_familia) #p = 0,4762
 cor.test(bd$plaquetas_vol, bd$peso) #p = 0,9738
 cor.test(bd$plaquetas_vol, bd$altura) #p = 0,3823
 
+#hads_ansiedade
+cor.test(bd$hads_ans, bd$shaps)
+cor.test(bd$hads_ans, bd$acips_total)
+cor.test(bd$hads_ans, bd$teps_total) 
+cor.test(bd$hads_ans, bd$hads_total)
+cor.test(bd$hads_ans, bd$neuroticismo)
+cor.test(bd$hads_ans, bd$idade) 
+cor.test(bd$hads_ans, bd$tempo_casado) 
+cor.test(bd$hads_ans, bd$num_filhos) 
+cor.test(bd$hads_ans, bd$renda_familia) 
+cor.test(bd$hads_ans, bd$peso) 
+cor.test(bd$hads_ans, bd$altura) 
+
+cor.test(bd$hads_ans, bd$neuroticismo)
+cor.test(bd$hads_ans, bd$hads_dep)
+cor.test(bd$hads_ans, bd$bas_total)
+cor.test(bd$hads_ans, bd$bis_total)
+cor.test(bd$hads_ans, bd$panas_pos)
+cor.test(bd$hads_ans, bd$panas_neg)
+cor.test(bd$hads_ans, bd$quesi_total)
+cor.test(bd$hads_ans, bd$quesi_abuso_emoc)
+cor.test(bd$hads_ans, bd$quesi_neglig_emoc)
+cor.test(bd$hads_ans, bd$quesi_abuso_sex)
+cor.test(bd$hads_ans, bd$quesi_abuso_fis)
+cor.test(bd$hads_ans, bd$quesi_neglig_fis)
+
+cor.test(bd$hads_ans, bd$hemacias)
+cor.test(bd$hads_ans, bd$hemoglobina)
+cor.test(bd$hads_ans, bd$hematocrito)
+cor.test(bd$hads_ans, bd$volumeglob) 
+cor.test(bd$hads_ans, bd$hemoglobina_m) 
+cor.test(bd$hads_ans, bd$hemoglobina_concent)
+cor.test(bd$hads_ans, bd$rdw) 
+cor.test(bd$hads_ans, bd$leucocitos)
+cor.test(bd$hads_ans, bd$segmentados)
+cor.test(bd$hads_ans, bd$segmentados_m)
+cor.test(bd$hads_ans, bd$bastonados)
+cor.test(bd$hads_ans, bd$linfocitos)
+cor.test(bd$hads_ans, bd$linfocitos_m) 
+cor.test(bd$hads_ans, bd$monocitos) 
+cor.test(bd$hads_ans, bd$monocitos_m)
+cor.test(bd$hads_ans, bd$eosinofilos)
+cor.test(bd$hads_ans, bd$eosinofilos_m) 
+cor.test(bd$hads_ans, bd$basofilos) 
+cor.test(bd$hads_ans, bd$basofilos_m)
+cor.test(bd$hads_ans, bd$plaquetas) 
+cor.test(bd$hads_ans, bd$plaquetas_vol)
+cor.test(bd$hads_ans, bd$PCR)
+cor.test(bd$hads_ans, bd$CRH)
+cor.test(bd$hads_ans, bd$cortisol)
+
+
+#hads_depressao
+cor.test(bd$hads_dep, bd$bas_total)
+cor.test(bd$hads_dep, bd$bis_total)
+cor.test(bd$hads_dep, bd$panas_pos)
+cor.test(bd$hads_dep, bd$panas_neg)
+cor.test(bd$hads_dep, bd$quesi_total)
+cor.test(bd$hads_dep, bd$quesi_abuso_emoc)
+cor.test(bd$hads_dep, bd$quesi_neglig_emoc)
+cor.test(bd$hads_dep, bd$quesi_abuso_sex)
+cor.test(bd$hads_dep, bd$quesi_abuso_fis)
+cor.test(bd$hads_dep, bd$quesi_neglig_fis)
+
+cor.test(bd$hads_dep, bd$idade) 
+cor.test(bd$hads_dep, bd$tempo_casado) 
+cor.test(bd$hads_dep, bd$num_filhos) 
+cor.test(bd$hads_dep, bd$renda_familia) 
+cor.test(bd$hads_dep, bd$peso) 
+cor.test(bd$hads_dep, bd$altura) 
+
+cor.test(bd$hads_dep, bd$hemacias)
+cor.test(bd$hads_dep, bd$hemoglobina)
+cor.test(bd$hads_dep, bd$hematocrito)
+cor.test(bd$hads_dep, bd$volumeglob) 
+cor.test(bd$hads_dep, bd$hemoglobina_m) 
+cor.test(bd$hads_dep, bd$hemoglobina_concent)
+cor.test(bd$hads_dep, bd$rdw) 
+cor.test(bd$hads_dep, bd$leucocitos)
+cor.test(bd$hads_dep, bd$segmentados)
+cor.test(bd$hads_dep, bd$segmentados_m)
+cor.test(bd$hads_dep, bd$bastonados)
+cor.test(bd$hads_dep, bd$linfocitos)
+cor.test(bd$hads_dep, bd$linfocitos_m) 
+cor.test(bd$hads_dep, bd$monocitos) 
+cor.test(bd$hads_dep, bd$monocitos_m)
+cor.test(bd$hads_dep, bd$eosinofilos)
+cor.test(bd$hads_dep, bd$eosinofilos_m) 
+cor.test(bd$hads_dep, bd$basofilos) 
+cor.test(bd$hads_dep, bd$basofilos_m)
+cor.test(bd$hads_dep, bd$plaquetas) 
+cor.test(bd$hads_dep, bd$plaquetas_vol)
+cor.test(bd$hads_dep, bd$PCR)
+cor.test(bd$hads_dep, bd$CRH)
+cor.test(bd$hads_dep, bd$cortisol)
+
+#bas_total
+cor.test(bd$bas_total, bd$bis_total)
+cor.test(bd$bas_total, bd$panas_pos)
+cor.test(bd$bas_total, bd$panas_neg)
+cor.test(bd$bas_total, bd$quesi_total)
+cor.test(bd$bas_total, bd$quesi_abuso_emoc)
+cor.test(bd$bas_total, bd$quesi_neglig_emoc)
+cor.test(bd$bas_total, bd$quesi_abuso_sex)
+cor.test(bd$bas_total, bd$quesi_abuso_fis)
+cor.test(bd$bas_total, bd$quesi_neglig_fis)
+
+cor.test(bd$bas_total, bd$idade) 
+cor.test(bd$bas_total, bd$tempo_casado) 
+cor.test(bd$bas_total, bd$num_filhos) 
+cor.test(bd$bas_total, bd$renda_familia) 
+cor.test(bd$bas_total, bd$peso) 
+cor.test(bd$bas_total, bd$altura) 
+
+cor.test(bd$bas_total, bd$hemacias)
+cor.test(bd$bas_total, bd$hemoglobina)
+cor.test(bd$bas_total, bd$hematocrito)
+cor.test(bd$bas_total, bd$volumeglob) 
+cor.test(bd$bas_total, bd$hemoglobina_m) 
+cor.test(bd$bas_total, bd$hemoglobina_concent)
+cor.test(bd$bas_total, bd$rdw) 
+cor.test(bd$bas_total, bd$leucocitos)
+cor.test(bd$bas_total, bd$segmentados)
+cor.test(bd$bas_total, bd$segmentados_m)
+cor.test(bd$bas_total, bd$bastonados)
+cor.test(bd$bas_total, bd$linfocitos)
+cor.test(bd$bas_total, bd$linfocitos_m) 
+cor.test(bd$bas_total, bd$monocitos) 
+cor.test(bd$bas_total, bd$monocitos_m)
+cor.test(bd$bas_total, bd$eosinofilos)
+cor.test(bd$bas_total, bd$eosinofilos_m) 
+cor.test(bd$bas_total, bd$basofilos) 
+cor.test(bd$bas_total, bd$basofilos_m)
+cor.test(bd$bas_total, bd$plaquetas) 
+cor.test(bd$bas_total, bd$plaquetas_vol)
+cor.test(bd$bas_total, bd$PCR)
+cor.test(bd$bas_total, bd$CRH)
+cor.test(bd$bas_total, bd$cortisol)
 
 #teste normal
 shapiro.test(bd$acips_total)
